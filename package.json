@@ -1,6 +1,7 @@
 {
-  "name": "ghostsniper-dashboard",
+  "name": "ghostsniper-v2",
   "version": "1.0.0",
+  "description": "Dashboard GhostSniper pour sniping crypto automatique",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
