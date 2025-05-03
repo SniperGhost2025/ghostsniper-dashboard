@@ -1,7 +1,55 @@
+/* globals.css */
+
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background-color: #0c0c0c;
-  color: white;
+  background-color: #0e0e0e;
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+input {
+  padding: 0.5rem;
+  border: 1px solid #555;
+  background-color: #1c1c1e;
+  color: #ffffff;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+button {
+  font-family: inherit;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #ccc;
+}
+
+th, td {
+  padding: 0.5rem;
+  border-bottom: 1px solid #222;
+}
+
+th {
+  text-align: left;
+  color: #aaa;
+}
+
+.success {
+  color: #00ff88;
+}
+
+.loss {
+  color: #ff5555;
+}
+
+.neutral {
+  color: #00ffff;
 }
