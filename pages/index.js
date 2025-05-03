@@ -1,107 +1,76 @@
 export default function Home() {
   return (
-    <div style={{
-      backgroundColor: '#0e0e0e',
-      color: '#ffffff',
-      fontFamily: 'Arial, sans-serif',
-      padding: '2rem',
-      minHeight: '100vh'
-    }}>
-      <h1 style={{ fontSize: '2rem', marginBottom: '1rem' }}>GhostSniper</h1>
+    <div style={{ maxWidth: '500px', margin: '0 auto' }}>
+      <h1>GhostSniper</h1>
 
-      <button style={{
-        backgroundColor: '#1c1c1e',
-        color: '#fff',
-        border: '1px solid #555',
-        padding: '0.5rem 1rem',
-        borderRadius: '5px',
-        marginBottom: '1.5rem',
-        cursor: 'pointer'
-      }}>
-        Connecter le wallet
-      </button>
+      <button style={{ marginBottom: '20px' }}>Connecter le wallet</button>
 
-      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '1rem', marginBottom: '1.5rem' }}>
-        <input placeholder="Capital à investir"
-          value="500"
-          style={inputStyle} />
-        <input placeholder="Take Profit (%)"
-          value="20"
-          style={inputStyle} />
-        <input placeholder="Slippage (%)"
-          value="0.5"
-          style={inputStyle} />
+      <div>
+        <label>Capital à investir</label>
+        <input type="text" value="500" />
       </div>
 
-      <div style={{ marginBottom: '1rem' }}>
+      <div>
+        <label>Take Profit (%)</label>
+        <input type="text" value="20" />
+      </div>
+
+      <div>
+        <label>Slippage (%)</label>
+        <input type="text" value="0.5" />
+      </div>
+
+      <div>
         <label>
-          <input type="checkbox" checked readOnly style={{ marginRight: '0.5rem' }} />
-          Sniping automatique
+          <input type="checkbox" checked readOnly />
+          {' '}Sniping automatique
         </label>
       </div>
 
-      <button style={{
-        backgroundColor: '#3b82f6',
-        color: '#fff',
-        border: 'none',
-        padding: '0.75rem',
-        borderRadius: '6px',
-        fontWeight: 'bold',
-        cursor: 'pointer',
-        width: '100%',
-        marginBottom: '2rem'
-      }}>
-        Activer le Snipe Automatique
-      </button>
+      <button>Activer le Snipe Automatique</button>
 
-      <h2 style={{ marginBottom: '1rem' }}>Historique des Snipes</h2>
-      <table style={{ width: '100%', borderCollapse: 'collapse', color: '#ccc' }}>
+      <h2 style={{ marginTop: '40px' }}>Historique des Snipes</h2>
+      <table>
         <thead>
           <tr>
-            <th style={thStyle}>Token</th>
-            <th style={thStyle}>Heure</th>
-            <th style={thStyle}>Entrée</th>
-            <th style={thStyle}>Sortie</th>
-            <th style={thStyle}>Résultat</th>
+            <th>Token</th>
+            <th>Heure</th>
+            <th>Entrée</th>
+            <th>Sortie</th>
+            <th>Résultat</th>
           </tr>
         </thead>
         <tbody>
-          {[
-            { token: 'ZAZA', heure: '09:15', entree: '09,38', sortie: '38,80', resultat: 'Réussi', color: 'green' },
-            { token: 'POUP', heure: '08:30', entree: '09,06', sortie: '32,30', resultat: '+52,00', color: '#00ffff' },
-            { token: 'LUNU', heure: '07:42', entree: '07,90', sortie: '35,63', resultat: '-56,00', color: 'red' },
-            { token: 'SURF', heure: '07:10', entree: '07,30', sortie: '33,00', resultat: '-33,00', color: 'red' }
-          ].map((row, i) => (
-            <tr key={i}>
-              <td style={tdStyle}>{row.token}</td>
-              <td style={tdStyle}>{row.heure}</td>
-              <td style={tdStyle}>{row.entree}</td>
-              <td style={tdStyle}>{row.sortie}</td>
-              <td style={{ ...tdStyle, color: row.color }}>{row.resultat}</td>
-            </tr>
-          ))}
+          <tr>
+            <td>ZAZA</td>
+            <td>09:15</td>
+            <td>09,38</td>
+            <td>38,80</td>
+            <td className="result-success">Réussi</td>
+          </tr>
+          <tr>
+            <td>POUP</td>
+            <td>08:30</td>
+            <td>09,06</td>
+            <td>32,30</td>
+            <td className="result-positive">+52,00</td>
+          </tr>
+          <tr>
+            <td>LUNU</td>
+            <td>07:42</td>
+            <td>07,90</td>
+            <td>35,63</td>
+            <td className="result-negative">-56,00</td>
+          </tr>
+          <tr>
+            <td>SURF</td>
+            <td>07:10</td>
+            <td>07,30</td>
+            <td>33,00</td>
+            <td className="result-negative">-33,00</td>
+          </tr>
         </tbody>
       </table>
     </div>
   );
 }
-
-const inputStyle = {
-  padding: '0.5rem',
-  border: '1px solid #555',
-  backgroundColor: '#1c1c1e',
-  color: '#fff',
-  borderRadius: '5px',
-  width: '150px'
-};
-
-const thStyle = {
-  borderBottom: '1px solid #333',
-  textAlign: 'left',
-  padding: '0.5rem'
-};
-
-const tdStyle = {
-  padding: '0.5rem',
-  borderBottom: '1px solid #222'
-};
