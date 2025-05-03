@@ -1,85 +1,100 @@
-/* GHOSTSNIPER DASHBOARD CSS GLOBAL */
-
 body {
   margin: 0;
-  padding: 20px;
+  padding: 0;
   background-color: #0c0c0c;
   color: #ffffff;
-  font-family: 'Arial', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
-h1, h2 {
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.title {
+  font-size: 28px;
   margin-bottom: 20px;
-  font-weight: bold;
+  text-align: center;
 }
 
-label {
-  display: block;
-  margin-top: 15px;
-  margin-bottom: 5px;
-  font-size: 15px;
-  color: #ccc;
-}
-
-input[type="text"],
-input[type="number"] {
+.walletButton,
+.snipeButton {
   width: 100%;
-  padding: 10px;
-  background-color: #1a1a1a;
-  color: #ffffff;
-  border: 1px solid #444;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
   border-radius: 5px;
-  font-size: 15px;
+  background-color: #0070f3;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.walletButton:hover,
+.snipeButton:hover {
+  background-color: #005ccc;
+}
+
+.form {
+  margin-bottom: 30px;
+}
+
+.inputGroup {
   margin-bottom: 15px;
 }
 
-input[type="checkbox"] {
-  margin-right: 8px;
-  transform: scale(1.2);
+.inputGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 15px;
+  color: #cccccc;
 }
 
-button {
-  background-color: #0070f3;
-  color: white;
-  font-weight: bold;
-  font-size: 16px;
-  padding: 12px;
+.inputGroup input {
   width: 100%;
-  border: none;
-  border-radius: 6px;
-  margin-top: 20px;
-  cursor: pointer;
+  padding: 10px;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 4px;
+  color: #fff;
+  font-size: 14px;
 }
 
-button:hover {
-  background-color: #0059c1;
+.checkboxGroup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.history h2 {
+  font-size: 20px;
+  margin-bottom: 15px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  margin-top: 30px;
   font-size: 14px;
+  margin-bottom: 20px;
 }
 
-th, td {
+th,
+td {
   text-align: left;
-  padding: 12px;
+  padding: 10px;
   border-bottom: 1px solid #333;
 }
 
 th {
-  color: #aaa;
+  color: #aaaaaa;
 }
 
-.result-positive {
-  color: #00ffcc;
-}
-
-.result-negative {
-  color: #ff6666;
-}
-
-.result-success {
+.green {
   color: #00ff88;
+}
+
+.red {
+  color: #ff4444;
 }
