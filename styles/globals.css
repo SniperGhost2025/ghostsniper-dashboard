@@ -1,16 +1,16 @@
-/* GhostSniper Dashboard Style */
+/* GHOSTSNIPER DASHBOARD STYLING */
 
 body {
-  margin: 0;
-  padding: 0;
   background-color: #0c0c0c;
-  color: white;
+  color: #ffffff;
   font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 20px;
 }
 
-h1, h2 {
-  margin-bottom: 20px;
+h1, h2, h3 {
   font-weight: bold;
+  margin-bottom: 20px;
 }
 
 label {
@@ -21,20 +21,17 @@ label {
   color: #ccc;
 }
 
-input[type="text"], input[type="number"] {
+input[type="text"],
+input[type="number"],
+input[type="checkbox"] {
   width: 100%;
   padding: 10px;
-  font-size: 15px;
-  border-radius: 6px;
-  border: 1px solid #444;
   background-color: #1a1a1a;
-  color: #fff;
+  color: #ffffff;
+  border: 1px solid #444;
+  border-radius: 5px;
+  font-size: 15px;
   margin-bottom: 15px;
-}
-
-input[type="checkbox"] {
-  transform: scale(1.2);
-  margin-right: 10px;
 }
 
 button {
@@ -51,7 +48,7 @@ button {
 }
 
 button:hover {
-  background-color: #005ccc;
+  background-color: #0059c1;
 }
 
 table {
@@ -61,15 +58,14 @@ table {
   font-size: 14px;
 }
 
-table th, table td {
-  padding: 12px;
+th, td {
   text-align: left;
+  padding: 12px;
   border-bottom: 1px solid #333;
 }
 
-table th {
+th {
   color: #aaa;
-  font-weight: bold;
 }
 
 .result-success {
