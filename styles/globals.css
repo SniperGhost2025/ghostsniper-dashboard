@@ -1,29 +1,28 @@
-/* GHOSTSNIPER DASHBOARD STYLING */
+/* GHOSTSNIPER DASHBOARD CSS GLOBAL */
 
 body {
+  margin: 0;
+  padding: 20px;
   background-color: #0c0c0c;
   color: #ffffff;
   font-family: 'Arial', sans-serif;
-  margin: 0;
-  padding: 20px;
 }
 
-h1, h2, h3 {
-  font-weight: bold;
+h1, h2 {
   margin-bottom: 20px;
+  font-weight: bold;
 }
 
 label {
   display: block;
   margin-top: 15px;
   margin-bottom: 5px;
-  font-size: 16px;
+  font-size: 15px;
   color: #ccc;
 }
 
 input[type="text"],
-input[type="number"],
-input[type="checkbox"] {
+input[type="number"] {
   width: 100%;
   padding: 10px;
   background-color: #1a1a1a;
@@ -32,6 +31,11 @@ input[type="checkbox"] {
   border-radius: 5px;
   font-size: 15px;
   margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+  margin-right: 8px;
+  transform: scale(1.2);
 }
 
 button {
@@ -53,8 +57,8 @@ button:hover {
 
 table {
   width: 100%;
-  margin-top: 30px;
   border-collapse: collapse;
+  margin-top: 30px;
   font-size: 14px;
 }
 
@@ -68,14 +72,14 @@ th {
   color: #aaa;
 }
 
-.result-success {
-  color: #00ff88;
-}
-
 .result-positive {
-  color: #00ffff;
+  color: #00ffcc;
 }
 
 .result-negative {
   color: #ff6666;
+}
+
+.result-success {
+  color: #00ff88;
 }
