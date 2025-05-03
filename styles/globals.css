@@ -1,55 +1,56 @@
-/* globals.css */
-
 body {
   margin: 0;
   padding: 0;
-  background-color: #0e0e0e;
-  color: #ffffff;
+  background-color: #0c0c0c;
+  color: white;
   font-family: 'Arial', sans-serif;
 }
 
-h1, h2, h3 {
-  color: #ffffff;
-  margin-bottom: 1rem;
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
 }
 
-input {
-  padding: 0.5rem;
-  border: 1px solid #555;
-  background-color: #1c1c1e;
-  color: #ffffff;
+input, button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  font-size: 16px;
   border-radius: 5px;
-  font-size: 14px;
+  border: none;
 }
 
 button {
-  font-family: inherit;
+  background-color: #0366d6;
+  color: white;
+  cursor: pointer;
+}
+
+h1, h2 {
+  margin-bottom: 10px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  color: #ccc;
+  margin-top: 20px;
 }
 
 th, td {
-  padding: 0.5rem;
-  border-bottom: 1px solid #222;
-}
-
-th {
   text-align: left;
-  color: #aaa;
+  padding: 8px;
+  border-bottom: 1px solid #444;
 }
 
 .success {
-  color: #00ff88;
+  color: #00ff9d;
 }
 
 .loss {
-  color: #ff5555;
+  color: #ff4d4d;
 }
 
-.neutral {
-  color: #00ffff;
+.bold {
+  font-weight: bold;
 }
