@@ -1,75 +1,79 @@
+import React from "react";
+import "./styles.css"; // Assure-toi que ce fichier CSS est bien relié
+
 export default function Home() {
   return (
-    <div className="container">
-      <h1>GhostSniper</h1>
+    <div className="dashboard">
+      <header className="header">
+        <h1>GhostSniper</h1>
+        <button className="wallet-btn">Connecter le wallet</button>
+      </header>
 
-      <button>Connecter le wallet</button>
-
-      <div className="grid">
-        <div>
+      <div className="bot-settings">
+        <div className="field-group">
           <label>Capital à investir</label>
-          <input type="number" value="500" />
+          <div className="input-usdc">
+            <input type="number" defaultValue="100" />
+            <span className="usdc-badge">USDC</span>
+          </div>
         </div>
-        <div>
-          <label>Take Profit (%)</label>
-          <input type="number" value="20" />
+
+        <div className="field-row">
+          <div className="field-group">
+            <label>Take Profit (%)</label>
+            <input type="number" defaultValue="30" />
+          </div>
+          <div className="field-group">
+            <label>Stop Loss (%)</label>
+            <input type="number" defaultValue="10" />
+          </div>
         </div>
-        <div>
-          <label>Slippage (%)</label>
-          <input type="number" value="0.5" />
+
+        <div className="field-group toggle-group">
+          <label>Sniping automatique</label>
+          <label className="switch">
+            <input type="checkbox" defaultChecked />
+            <span className="slider round"></span>
+          </label>
         </div>
+
+        <button className="launch-btn">Lancer le bot</button>
       </div>
 
-      <div style={{ marginTop: '1rem' }}>
-        <label>
-          <input type="checkbox" checked readOnly /> Sniping automatique
-        </label>
+      <div className="history">
+        <h2>Historique des Snipes</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Token</th>
+              <th>Résultat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>PEUP</td>
+              <td>
+                <div className="progress-bar green" style={{ width: "80%" }}></div>
+                <span className="positive">+20%</span>
+              </td>
+            </tr>
+            <tr>
+              <td>LULU</td>
+              <td>
+                <div className="progress-bar red" style={{ width: "40%" }}></div>
+                <span className="negative">-11%</span>
+              </td>
+            </tr>
+            <tr>
+              <td>RUFI</td>
+              <td>
+                <div className="progress-bar red" style={{ width: "20%" }}></div>
+                <span className="negative">-6%</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-
-      <button>Activer le Snipe Automatique</button>
-
-      <h2>Historique des Snipes</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Token</th>
-            <th>Heure</th>
-            <th>Entrée</th>
-            <th>Sortie</th>
-            <th>Résultat</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>ZAZA</td>
-            <td>09:15</td>
-            <td>09,38</td>
-            <td>38,80</td>
-            <td className="result-success">Réussi</td>
-          </tr>
-          <tr>
-            <td>POUP</td>
-            <td>08:30</td>
-            <td>09,06</td>
-            <td>32,30</td>
-            <td className="result-positive">+52,00</td>
-          </tr>
-          <tr>
-            <td>LUNU</td>
-            <td>07:42</td>
-            <td>07,90</td>
-            <td>35,63</td>
-            <td className="result-negative">-56,00</td>
-          </tr>
-          <tr>
-            <td>SURF</td>
-            <td>07:10</td>
-            <td>07,30</td>
-            <td>33,00</td>
-            <td className="result-negative">-33,00</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
   );
 }
