@@ -1,3 +1,5 @@
+/* GhostSniper Dashboard Style */
+
 body {
   margin: 0;
   padding: 0;
@@ -6,51 +8,78 @@ body {
   font-family: 'Arial', sans-serif;
 }
 
-.container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
+h1, h2 {
+  margin-bottom: 20px;
+  font-weight: bold;
 }
 
-input, button {
+label {
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+input[type="text"], input[type="number"] {
   width: 100%;
   padding: 10px;
-  margin-top: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
+  font-size: 15px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background-color: #1a1a1a;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+  transform: scale(1.2);
+  margin-right: 10px;
 }
 
 button {
-  background-color: #0366d6;
+  background-color: #0070f3;
   color: white;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  margin-top: 20px;
   cursor: pointer;
 }
 
-h1, h2 {
-  margin-bottom: 10px;
+button:hover {
+  background-color: #005ccc;
 }
 
 table {
   width: 100%;
+  margin-top: 30px;
   border-collapse: collapse;
-  margin-top: 20px;
+  font-size: 14px;
 }
 
-th, td {
+table th, table td {
+  padding: 12px;
   text-align: left;
-  padding: 8px;
-  border-bottom: 1px solid #444;
+  border-bottom: 1px solid #333;
 }
 
-.success {
-  color: #00ff9d;
-}
-
-.loss {
-  color: #ff4d4d;
-}
-
-.bold {
+table th {
+  color: #aaa;
   font-weight: bold;
+}
+
+.result-success {
+  color: #00ff88;
+}
+
+.result-positive {
+  color: #00ffff;
+}
+
+.result-negative {
+  color: #ff6666;
 }
